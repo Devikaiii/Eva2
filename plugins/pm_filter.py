@@ -404,16 +404,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Madara_Updates')
-        ], [
-            InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
-        ], [
-            InlineKeyboardButton('🔒 ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ 🔒', callback_data='close_data')
-        ]]
+            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('💠 GᏒԾUᎮ 1 💠', url='https://t.me/CINEMA_CORNER_MOVIES'),
+            InlineKeyboardButton('💠 GᏒԾUᎮ 2 💠', url='https://t.me/cinemavilla_group')         
+            ],[
+            InlineKeyboardButton('💠 MAIN CHΛИИΞL 💠 ', url='https://t.me/+P4e0IpFUubU0NTY1'),
+            InlineKeyboardButton('💠 UPDATE CHΛИИΞL  💠', url='https://t.me/Madara_Updates')         
+            ],[
+            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
+            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            ],[
+            InlineKeyboardButton('💠 SΞΛᏒCH HΞᏒΞ 💠', switch_inline_query_current_chat='')
+        ]]  
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
