@@ -39,16 +39,19 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Madara_Updates')
+            InlineKeyboardButton('💠 GᏒԾUᎮ 1 💠', url='https://t.me/CINEMA_CORNER_MOVIES'),
+            InlineKeyboardButton('💠 GᏒԾUᎮ 2 💠', url='https://t.me/cinemavilla_group')         
             ],[
-            InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('💠 MAIN CHΛИИΞL 💠 ', url='https://t.me/+P4e0IpFUubU0NTY1'),
+            InlineKeyboardButton('💠 UPDATE CHΛИИΞL  💠', url='https://t.me/Madara_Updates')         
             ],[
-            InlineKeyboardButton('🔒 ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ 🔒', callback_data='close_data')
-        ]]
+            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
+            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            ],[
+            InlineKeyboardButton('💠 SΞΛᏒCH HΞᏒΞ 💠', switch_inline_query_current_chat='')
+        ]]  
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -84,16 +87,19 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕  ᴀᴅᴅ ᴍᴇ  ʏᴏᴜʀ ɢʀᴏᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Madara_Updates')
+            InlineKeyboardButton('💠 GᏒԾUᎮ 1 💠', url='https://t.me/CINEMA_CORNER_MOVIES'),
+            InlineKeyboardButton('💠 GᏒԾUᎮ 2 💠', url='https://t.me/cinemavilla_group')         
             ],[
-            InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('😊 ᴀʙᴏᴜᴛt', callback_data='about')
+            InlineKeyboardButton('💠 MAIN CHΛИИΞL 💠 ', url='https://t.me/+P4e0IpFUubU0NTY1'),
+            InlineKeyboardButton('💠 UPDATE CHΛИИΞL  💠', url='https://t.me/Madara_Updates')         
             ],[
-            InlineKeyboardButton('🔒 ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ 🔒', callback_data='close_data')
-        ]]
+            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
+            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            ],[
+            InlineKeyboardButton('💠 SΞΛᏒCH HΞᏒΞ 💠', switch_inline_query_current_chat='')
+        ]]  
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
